@@ -1,1 +1,0 @@
-const t={key:"v-8daa1a0e",path:"/",title:"",lang:"en-US",frontmatter:{home:!0,actions:[{text:"Get Started",link:"/guide/",type:"primary"}],footer:"MIT Licensed | Copyright \xA9 2022-present ntnyq"},excerpt:"",headers:[],git:{updatedTime:1651545606e3,contributors:[{name:"ntnyq",email:"ntnyq@foxmail.com",commits:1}]},filePathRelative:"README.md"};export{t as data};
