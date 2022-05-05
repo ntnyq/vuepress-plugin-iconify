@@ -16,6 +16,7 @@ importers:
       pnpm: ^7.0.0
       prettier: ^2.6.2
       rimraf: ^3.0.2
+      typescript: ^4.6.4
       vue: ^3.2.33
       vuepress: 2.0.0-beta.43
     dependencies:
@@ -32,6 +33,7 @@ importers:
       pnpm: 7.0.0
       prettier: 2.6.2
       rimraf: 3.0.2
+      typescript: 4.6.4
       vue: 3.2.33
       vuepress: 2.0.0-beta.43_f3cmfsc4botavqrm6v6tctsjbm
 
@@ -3060,6 +3062,12 @@ packages:
   /type-fest/0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
+    dev: true
+
+  /typescript/4.6.4:
+    resolution: {integrity: sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: true
 
   /typical/4.0.0:
