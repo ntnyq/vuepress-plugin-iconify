@@ -1,3 +1,18 @@
 {
-  "cSpell.words": ["bumpp", "iconify", "pnpm", "tsbuildinfo", "vuepress"]
+  "cSpell.words": [
+    "bumpp",
+    "iconify",
+    "pnpm",
+    "tsbuildinfo",
+    "vuepress"
+  ],
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  }
 }

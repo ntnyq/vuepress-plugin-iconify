@@ -1,5 +1,5 @@
 import path from 'path'
-import { type Plugin } from '@vuepress/core'
+import type { Plugin } from 'vuepress'
 
 export interface IconifyPluginOptions {
   componentName?: string
@@ -13,9 +13,6 @@ export const iconifyPlugin = (options: IconifyPluginOptions = {}): Plugin => {
       __ICONIFY_COMPONENT_NAME__: options.componentName ?? `VpIcon`,
     },
 
-    clientAppEnhanceFiles: path.resolve(
-      __dirname,
-      `../client/clientAppEnhance.js`,
-    ),
+    clientConfigFile: path.resolve(__dirname, `../client/config.js`),
   }
 }

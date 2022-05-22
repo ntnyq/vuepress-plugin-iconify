@@ -23,10 +23,10 @@ $ pnpm add vuepress-plugin-iconify -D
 For `.vuepress/config.js`:
 
 ```js
-const { iconifyPlugin } = require('vuepress-plugin-iconify')
+const { iconifyPlugin } = require(`vuepress-plugin-iconify`)
 
 module.exports = {
-    plugins: [iconifyPlugin()],
+  plugins: [iconifyPlugin()],
 }
 ```
 
@@ -37,7 +37,7 @@ import { defineUserConfig } from '@vuepress/cli'
 import { iconifyPlugin } from 'vuepress-plugin-iconify'
 
 export default defineUserConfig({
-    plugins: [iconifyPlugin()],
+  plugins: [iconifyPlugin()],
 })
 ```
 
@@ -74,11 +74,11 @@ import { defineUserConfig } from '@vuepress/cli'
 import { iconifyPlugin } from 'vuepress-plugin-iconify'
 
 export default defineUserConfig({
-    plugins: [
-        iconifyPlugin({
-            componentName: `VP`,
-        }),
-    ],
+  plugins: [
+    iconifyPlugin({
+      componentName: `VP`,
+    }),
+  ],
 })
 ```
 
