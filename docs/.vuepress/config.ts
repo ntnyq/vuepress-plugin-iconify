@@ -23,7 +23,6 @@ export default defineUserConfig({
     docsRepo: `ntnyq/vuepress-plugin-iconify`,
     docsDir: `docs`,
     docsBranch: `main`,
-    search: false,
     navbar: [
       { text: `Home`, link: `/` },
       { text: `Guide`, link: `/guide/` },
