@@ -75,23 +75,22 @@ export default defineClientConfig({
         },
       },
       setup (props) {
-        return () =>
-          h(Icon, {
-            icon: props.icon,
-            color: props.color,
-            width: props.width,
-            height: props.height,
-            inline: props.inline,
-            rotate: props.rotate,
-            horizontalFlip: props.horizontalFlip,
-            verticalFlip: props.verticalFlip,
-            flip: props.flip,
-            horizontalAlign: props.horizontalAlign,
-            verticalAlign: props.verticalAlign,
-            slice: props.slice,
-            align: props.align,
-            onLoad: props.onLoad,
-          })
+        return () => h(Icon, {
+          icon: props.icon,
+          color: props.color,
+          width: props.width,
+          height: props.height,
+          inline: props.inline,
+          rotate: props.rotate,
+          horizontalFlip: props.horizontalFlip,
+          verticalFlip: props.verticalFlip,
+          flip: props.flip,
+          horizontalAlign: props.horizontalAlign,
+          verticalAlign: props.verticalAlign,
+          slice: props.slice,
+          align: props.align,
+          onLoad: props.onLoad,
+        })
       },
     })
   },

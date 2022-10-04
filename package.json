@@ -1,7 +1,7 @@
 {
   "name": "vuepress-plugin-iconify",
   "version": "0.0.2",
-  "packageManager": "pnpm@7.1.3",
+  "packageManager": "pnpm@7.13.1",
   "description": "Using icons more easier in VuePress",
   "keywords": [
     "vuepress",
@@ -47,26 +47,26 @@
     "release:version": "bumpp package.json --execute=\"pnpm release:changelog\" --all"
   },
   "peerDependencies": {
-    "vuepress": "^2.0.0-beta.45"
+    "vuepress": "^2.0.0-beta.51"
   },
   "dependencies": {
-    "@iconify/vue": "^3.2.1"
+    "@iconify/vue": "^4.0.0"
   },
   "devDependencies": {
     "@ntnyq/eslint-config-typescript": "^1.0.4",
-    "@types/node": "^18.7.6",
-    "@vuepress/client": "2.0.0-beta.49",
+    "@types/node": "^18.8.2",
+    "@vuepress/client": "2.0.0-beta.51",
     "bumpp": "^8.2.1",
     "conventional-changelog-cli": "^2.2.2",
-    "eslint": "^8.22.0",
+    "eslint": "^8.24.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "npm-run-all": "^4.1.5",
-    "pnpm": "^7.9.3",
+    "pnpm": "^7.13.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.7.4",
-    "vue": "^3.2.37",
-    "vuepress": "2.0.0-beta.49"
+    "typescript": "^4.8.4",
+    "vue": "^3.2.40",
+    "vuepress": "2.0.0-beta.51"
   },
   "lint-staged": {
     "*.{js,ts,yaml,md,json}": "eslint --fix"
