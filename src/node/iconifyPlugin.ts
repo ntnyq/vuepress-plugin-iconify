@@ -1,5 +1,8 @@
-import path from 'path'
+import { URL, fileURLToPath } from 'node:url'
+import { resolve } from 'pathe'
 import type { Plugin } from 'vuepress'
+
+const __dirname = fileURLToPath(new URL(`.`, import.meta.url))
 
 export interface IconifyPluginOptions {
   componentName?: string
@@ -13,6 +16,6 @@ export const iconifyPlugin = (options: IconifyPluginOptions = {}): Plugin => {
       __ICONIFY_COMPONENT_NAME__: options.componentName ?? `VpIcon`,
     },
 
-    clientConfigFile: path.resolve(__dirname, `../client/config.js`),
+    clientConfigFile: resolve(__dirname, `../client/config.js`),
   }
 }
