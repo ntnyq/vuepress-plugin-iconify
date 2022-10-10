@@ -1,7 +1,7 @@
 {
   "name": "vuepress-plugin-iconify",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "packageManager": "pnpm@7.13.3",
   "description": "Using icons more easier in VuePress",
   "keywords": [

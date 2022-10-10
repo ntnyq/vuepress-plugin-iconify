@@ -1,3 +1,12 @@
+# [0.1.0](https://github.com/ntnyq/vuepress-plugin-iconify/compare/v0.0.3...v0.1.0) (2022-10-10)
+
+
+### Features
+
+* migrate to pure ESM ([71f20c4](https://github.com/ntnyq/vuepress-plugin-iconify/commit/71f20c4a054ff9dd11f71485bf9e5f88b704b55e))
+
+
+
 ## [0.0.3](https://github.com/ntnyq/vuepress-plugin-iconify/compare/v0.0.2...v0.0.3) (2022-10-04)
 
 
