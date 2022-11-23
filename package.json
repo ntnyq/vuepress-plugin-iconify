@@ -37,33 +37,29 @@
   "scripts": {
     "build": "run-s clean build:lib",
     "build:docs": "pnpm --filter=docs run build",
-    "build:lib": "tsc -b tsconfig.build.json",
+    "build:lib": "tsc -b",
     "clean": "rimraf lib *.tsbuildinfo",
     "dev": "run-s clean dev:lib",
     "dev:docs": "pnpm --filter=docs run dev",
-    "dev:lib": "tsc -b tsconfig.build.json --watch",
+    "dev:lib": "tsc -b --watch",
     "prepare": "husky install",
     "lint": "eslint .",
-    "typecheck": "tsc -p tsconfig.build.json --noEmit",
-    "release": "run-s release:check release:version release:publish",
-    "release:changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "typecheck": "tsc --noEmit",
+    "release": "run-s release:check release:publish",
     "release:check": "run-s typecheck clean build",
-    "release:publish": "pnpm -r publish",
-    "release:version": "bumpp package.json --execute=\"pnpm release:changelog\" --all"
+    "release:publish": "bumpp && pnpm publish"
   },
   "peerDependencies": {
     "vuepress": "^2.0.0-beta.51"
   },
   "dependencies": {
-    "@iconify/vue": "^4.0.0",
-    "pathe": "^1.0.0"
+    "@iconify/vue": "^4.0.0"
   },
   "devDependencies": {
     "@ntnyq/eslint-config-typescript": "^1.1.0",
     "@types/node": "^18.11.9",
-    "@vuepress/client": "2.0.0-beta.51",
+    "@vuepress/client": "2.0.0-beta.53",
     "bumpp": "^8.2.1",
-    "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.28.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
@@ -72,16 +68,9 @@
     "rimraf": "^3.0.2",
     "typescript": "^4.9.3",
     "vue": "^3.2.45",
-    "vuepress": "2.0.0-beta.51"
+    "vuepress": "2.0.0-beta.53"
   },
   "lint-staged": {
-    "*.{js,ts,yaml,md,json}": "eslint --fix"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": "@ntnyq/typescript"
-  },
-  "eslintIgnore": [
-    "lib"
-  ]
+    "*.{js,ts,vue,yaml,yml,md,json}": "eslint --fix"
+  }
 }

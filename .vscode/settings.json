@@ -1,6 +1,19 @@
 {
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "json5"
+  ],
   "cSpell.words": [
     "bumpp",
+    "changelogithub",
     "iconify",
     "pathe",
     "pnpm",

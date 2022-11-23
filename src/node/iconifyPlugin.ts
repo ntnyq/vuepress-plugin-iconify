@@ -1,5 +1,5 @@
 import { URL, fileURLToPath } from 'node:url'
-import { resolve } from 'pathe'
+import { resolve } from 'node:path'
 import type { Plugin } from 'vuepress'
 
 const __dirname = fileURLToPath(new URL(`.`, import.meta.url))
