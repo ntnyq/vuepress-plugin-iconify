@@ -57,12 +57,12 @@
   },
   "devDependencies": {
     "@ntnyq/eslint-config-typescript": "^1.2.1",
-    "@types/node": "^18.11.17",
+    "@types/node": "^18.11.18",
     "@vuepress/client": "2.0.0-beta.53",
     "bumpp": "^8.2.1",
     "eslint": "^8.30.0",
     "husky": "^8.0.2",
-    "lint-staged": "^13.1.0",
+    "nano-staged": "^0.8.0",
     "npm-run-all": "^4.1.5",
     "pnpm": "^7.20.0",
     "rimraf": "^3.0.2",
@@ -70,7 +70,7 @@
     "vue": "^3.2.45",
     "vuepress": "2.0.0-beta.53"
   },
-  "lint-staged": {
+  "nano-staged": {
     "*.{js,ts,vue,yaml,yml,md,json}": "eslint --fix"
   }
 }

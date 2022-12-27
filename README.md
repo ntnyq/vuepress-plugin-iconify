@@ -48,7 +48,7 @@ Then, you can use the `VpIcon` component in your docs:
 
 ## Prior Art
 
--   [iconify](https://iconify.design)
+- [iconify](https://iconify.design)
 
 ## License
 
