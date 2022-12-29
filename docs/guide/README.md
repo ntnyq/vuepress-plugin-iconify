@@ -34,9 +34,9 @@ Then, you can use the `VpIcon` component in your markdown docs:
 ```markdown
 <vp-icon icon="vscode-icons:file-type-vue" width="50px" />
 
-<vp-icon icon="vscode-icons:file-type-vue" width="50px" :v-flip="true" />
+<vp-icon icon="vscode-icons:file-type-vue" width="50px" vFlip />
 
-<vp-icon icon="vscode-icons:file-type-flutter" width="50px" :h-flip="true" />
+<vp-icon icon="vscode-icons:file-type-flutter" width="50px" hFlip />
 
 <vp-icon icon="fa:github" width="50px" color="#9944a8" />
 
@@ -47,9 +47,9 @@ Then, you can use the `VpIcon` component in your markdown docs:
 
 <vp-icon icon="vscode-icons:file-type-vue" width="50px" />
 
-<vp-icon icon="vscode-icons:file-type-vue" width="50px" :v-flip="true" />
+<vp-icon icon="vscode-icons:file-type-vue" width="50px" vFlip />
 
-<vp-icon icon="vscode-icons:file-type-flutter" width="50px" :h-flip="true" />
+<vp-icon icon="vscode-icons:file-type-flutter" width="50px" hFlip />
 
 <vp-icon icon="fa:github" width="50px" color="#9944a8" />
 

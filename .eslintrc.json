@@ -1,7 +1,10 @@
 {
   "root": true,
-  "extends": "@ntnyq/typescript",
+  "extends": [
+    "@ntnyq/typescript"
+  ],
   "ignorePatterns": [
-    "lib"
+    "lib",
+    "docs-dist"
   ]
 }
