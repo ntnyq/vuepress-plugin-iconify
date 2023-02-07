@@ -1,7 +1,7 @@
-import type { PropType, StyleValue } from 'vue'
 import { defineComponent, h } from 'vue'
-import type { IconifyIcon, IconifyRenderMode } from '@iconify/vue'
 import { Icon } from '@iconify/vue'
+import type { PropType, StyleValue } from 'vue'
+import type { IconifyIcon, IconifyRenderMode } from '@iconify/vue'
 
 export const IconComponent = defineComponent({
   props: {
@@ -30,8 +30,9 @@ export const IconComponent = defineComponent({
     flip: String,
     vFlip: Boolean,
     hFlip: Boolean,
-    // alias
+    // alias of vFlip
     verticalFlip: Boolean,
+    // alias of hFlip
     horizontalFlip: Boolean,
 
     inline: Boolean,
@@ -42,7 +43,7 @@ export const IconComponent = defineComponent({
     },
   },
 
-  setup (props) {
+  setup(props) {
     return () => h(Icon, {
       icon: props.icon,
       width: props.width,
