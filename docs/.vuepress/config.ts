@@ -26,7 +26,7 @@ export default defineUserConfig({
       { text: 'Guide', link: '/guide/' },
       {
         text: 'Changelog',
-        link: 'https://github.com/ntnyq/vuepress-plugin-iconify/blob/main/CHANGELOG.md',
+        link: 'https://github.com/ntnyq/vuepress-plugin-iconify/releases',
       },
     ],
     sidebar: ['/guide/'],
