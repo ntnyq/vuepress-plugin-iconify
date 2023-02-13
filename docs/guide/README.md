@@ -25,7 +25,9 @@ import { defineUserConfig } from 'vuepress'
 import { iconifyPlugin } from 'vuepress-plugin-iconify'
 
 export default defineUserConfig({
-  plugins: [iconifyPlugin()],
+  plugins: [
+    iconifyPlugin(),
+  ],
 })
 ```
 
@@ -68,7 +70,7 @@ import { iconifyPlugin } from 'vuepress-plugin-iconify'
 export default defineUserConfig({
   plugins: [
     iconifyPlugin({
-      componentName: `VP`,
+      componentName: 'VP',
     }),
   ],
 })

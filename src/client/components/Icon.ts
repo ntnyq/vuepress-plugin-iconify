@@ -1,9 +1,9 @@
 import { defineComponent, h } from 'vue'
-import { Icon } from '@iconify/vue'
+import { Icon as IconifyVueIcon } from '@iconify/vue'
 import type { PropType, StyleValue } from 'vue'
 import type { IconifyIcon, IconifyRenderMode } from '@iconify/vue'
 
-export const IconComponent = defineComponent({
+export const Icon = defineComponent({
   props: {
     icon: {
       type: [String, Object] as PropType<String | IconifyIcon>,
@@ -44,7 +44,7 @@ export const IconComponent = defineComponent({
   },
 
   setup(props) {
-    return () => h(Icon, {
+    return () => h(IconifyVueIcon, {
       icon: props.icon,
       width: props.width,
       height: props.height,

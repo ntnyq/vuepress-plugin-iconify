@@ -1,10 +1,10 @@
 import { defineClientConfig } from '@vuepress/client'
-import { IconComponent } from './components/Icon.js'
+import { Icon } from './components/Icon.js'
 
 declare const __ICONIFY_COMPONENT_NAME__: string
 
 export default defineClientConfig({
   enhance: ({ app }) => {
-    app.component(__ICONIFY_COMPONENT_NAME__, IconComponent)
+    app.component(__ICONIFY_COMPONENT_NAME__, Icon)
   },
 })
