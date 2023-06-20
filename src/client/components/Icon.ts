@@ -44,19 +44,21 @@ export const Icon = defineComponent({
   },
 
   setup(props) {
-    return () => h(IconifyVueIcon, {
-      icon: props.icon,
-      width: props.width,
-      height: props.height,
-      mode: props.mode,
-      color: props.color,
-      style: props.style,
-      flip: props.flip,
-      vFlip: props.verticalFlip || props.vFlip,
-      hFlip: props.horizontalFlip || props.hFlip,
-      inline: props.inline,
-      rotate: props.rotate,
-      onLoad: props.onLoad,
-    })
+    return () =>
+      // @ts-expect-error type not match
+      h(IconifyVueIcon, {
+        icon: props.icon,
+        width: props.width,
+        height: props.height,
+        mode: props.mode,
+        color: props.color,
+        style: props.style,
+        flip: props.flip,
+        vFlip: props.verticalFlip || props.vFlip,
+        hFlip: props.horizontalFlip || props.hFlip,
+        inline: props.inline,
+        rotate: props.rotate,
+        onLoad: props.onLoad,
+      })
   },
 })

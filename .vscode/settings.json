@@ -1,32 +1,16 @@
 {
   "eslint.validate": [
+    "vue",
+    "html",
+    "json",
+    "jsonc",
+    "json5",
+    "markdown",
     "javascript",
     "typescript",
     "javascriptreact",
-    "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "json5"
+    "typescriptreact"
   ],
-  "cSpell.words": [
-    "bumpp",
-    "changelogithub",
-    "iconify",
-    "pathe",
-    "pnpm",
-    "tsbuildinfo",
-    "vuepress"
-  ],
-  "[typescript]": {
-    "editor.formatOnSave": false
-  },
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
-  "[markdown]": {
-    "editor.formatOnSave": true
-  }
+  "cSpell.allowCompoundWords": true,
+  "cSpell.words": ["bumpp", "changelogithub", "iconify", "pathe", "pnpm", "tsbuildinfo", "vuepress"]
 }
