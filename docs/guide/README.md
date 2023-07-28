@@ -8,26 +8,28 @@ sidebarDepth: 2
 
 ## Install
 
-```shell
-$ npm install vuepress-plugin-iconify -D
-# or
-$ yarn add vuepress-plugin-iconify -D
-# or
-$ pnpm add vuepress-plugin-iconify -D
+```bash
+npm install vuepress-plugin-iconify -D
+```
+
+```bash
+yarn add vuepress-plugin-iconify -D
+```
+
+```bash
+pnpm add vuepress-plugin-iconify -D
 ```
 
 ## Usage
 
 > See [Official Docs](https://v2.vuepress.vuejs.org/guide/plugin.html#plugin) about how to use a plugin in VuePress.
 
-```js
+```ts
 import { defineUserConfig } from 'vuepress'
 import { iconifyPlugin } from 'vuepress-plugin-iconify'
 
 export default defineUserConfig({
-  plugins: [
-    iconifyPlugin(),
-  ],
+  plugins: [iconifyPlugin()],
 })
 ```
 
@@ -63,7 +65,7 @@ Then, you can use the `VpIcon` component in your markdown docs:
 
 For advanced usage.
 
-```js
+```ts
 import { defineUserConfig } from 'vuepress'
 import { iconifyPlugin } from 'vuepress-plugin-iconify'
 
