@@ -1,12 +1,12 @@
 import { defineComponent, h } from 'vue'
 import { Icon as IconifyVueIcon } from '@iconify/vue'
 import type { PropType, StyleValue } from 'vue'
-import type { IconifyIcon, IconifyRenderMode } from '@iconify/vue'
+import type { IconifyIcon, IconifyIconOnLoad, IconifyRenderMode } from '@iconify/vue'
 
 export const Icon = defineComponent({
   props: {
     icon: {
-      type: [String, Object] as PropType<String | IconifyIcon>,
+      type: [String, Object] as PropType<string | IconifyIcon>,
       required: true,
     },
 
@@ -36,16 +36,16 @@ export const Icon = defineComponent({
     horizontalFlip: Boolean,
 
     inline: Boolean,
-    rotate: [String, Number],
+    rotate: Number,
+
     onLoad: {
-      type: Function,
+      type: Function as PropType<IconifyIconOnLoad>,
       default: () => {},
     },
   },
 
   setup(props) {
     return () =>
-      // @ts-expect-error type not match
       h(IconifyVueIcon, {
         icon: props.icon,
         width: props.width,
