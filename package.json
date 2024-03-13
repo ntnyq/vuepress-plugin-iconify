@@ -2,7 +2,7 @@
   "name": "vuepress-plugin-iconify",
   "type": "module",
   "version": "0.5.0",
-  "packageManager": "pnpm@8.10.4",
+  "packageManager": "pnpm@8.15.4",
   "description": "Using icons more easier in VuePress",
   "keywords": [
     "vuepress",
@@ -22,13 +22,12 @@
   },
   "repository": "ntnyq/vuepress-plugin-iconify",
   "exports": {
-    "./package.json": "./package.json",
     ".": "./dist/node/index.js",
     "./client": "./dist/client/index.js",
-    "./*": "./*"
+    "./client/*": "./dist/client/*",
+    "./package.json": "./package.json"
   },
   "main": "./dist/node/index.js",
-  "module": "./dist/node/index.js",
   "types": "./dist/node/index.d.ts",
   "files": [
     "dist"
@@ -42,47 +41,34 @@
     "dev:docs": "pnpm --filter=docs run dev",
     "dev:lib": "tsc -b --watch",
     "lint": "eslint .",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "run-s release:check release:publish",
     "release:check": "run-s typecheck clean build",
     "release:publish": "bumpp && pnpm publish",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "vuepress": "2.0.0-beta.68",
-    "vuepress-vite": "2.0.0-beta.68",
-    "vuepress-webpack": "2.0.0-beta.68"
-  },
-  "peerDependenciesMeta": {
-    "vuepress": {
-      "optional": true
-    },
-    "vuepress-vite": {
-      "optional": true
-    },
-    "vuepress-webpack": {
-      "optional": true
-    }
+    "vuepress": "2.0.0-rc.8"
   },
   "dependencies": {
     "@iconify/vue": "^4.1.1",
-    "@vuepress/client": "2.0.0-beta.68",
-    "vue": "^3.3.8"
+    "@vuepress/client": "2.0.0-rc.8",
+    "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^1.19.0",
-    "@ntnyq/prettier-config": "^1.19.0",
-    "@types/node": "^20.9.0",
-    "bumpp": "^9.2.0",
-    "eslint": "^8.53.0",
-    "husky": "^8.0.3",
+    "@ntnyq/eslint-config": "^1.20.3",
+    "@ntnyq/prettier-config": "^1.20.3",
+    "@types/node": "^20.11.26",
+    "bumpp": "^9.4.0",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
     "nano-staged": "^0.8.0",
-    "npm-run-all": "^4.1.5",
-    "pnpm": "^8.10.4",
-    "prettier": "^3.1.0",
+    "npm-run-all2": "^6.1.2",
+    "pnpm": "^8.15.4",
+    "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
-    "typescript": "^5.2.2",
-    "vuepress": "2.0.0-beta.68"
+    "typescript": "^5.4.2",
+    "vuepress": "2.0.0-rc.8"
   },
   "prettier": "@ntnyq/prettier-config",
   "nano-staged": {

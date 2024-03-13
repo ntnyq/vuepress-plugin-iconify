@@ -1,5 +1,6 @@
-import { defineUserConfig } from '@vuepress/cli'
+import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
+import { viteBundler } from '@vuepress/bundler-vite'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { iconifyPlugin } from 'vuepress-plugin-iconify'
 
@@ -7,6 +8,8 @@ export default defineUserConfig({
   title: 'vuepress-plugin-iconify',
 
   description: 'Using icons more easier in VuePress',
+
+  bundler: viteBundler(),
 
   head: [
     [
