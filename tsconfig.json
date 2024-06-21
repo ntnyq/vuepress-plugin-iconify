@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "module": "ESNext",
     "target": "ES2022",
     "lib": ["DOM", "ES2022"],
+    "module": "ESNext",
+    "rootDir": "./src",
     "moduleResolution": "Bundler",
-    "esModuleInterop": true,
-    "sourceMap": false,
-    "strict": true,
+    "types": ["node"],
     "declaration": true,
-    "noImplicitAny": true,
-    "skipLibCheck": true,
+    "sourceMap": false,
+    "outDir": "./dist",
     "noEmitOnError": true,
-    "types": ["node"]
+    "esModuleInterop": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
   },
-  "include": ["./src"]
+  "include": ["./src", "./docs"]
 }

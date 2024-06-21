@@ -2,9 +2,9 @@
 home: true
 title: Home
 actions:
-    - text: Get Started
-      link: /guide/
-      type: primary
+  - text: Get Started
+    link: /guide/
+    type: primary
 footer: MIT Licensed | Copyright © 2022-present ntnyq
 ---
 
