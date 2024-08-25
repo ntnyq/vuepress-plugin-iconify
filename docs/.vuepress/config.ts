@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 import { viteBundler } from '@vuepress/bundler-vite'
+import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { iconifyPlugin } from 'vuepress-plugin-iconify'
 
@@ -39,6 +40,26 @@ export default defineUserConfig({
   }),
 
   plugins: [
+    shikiPlugin({
+      langs: [
+        'js',
+        'ts',
+        'md',
+        'jsx',
+        'tsx',
+        'html',
+        'vue',
+        'css',
+        'scss',
+        'json',
+        'jsonc',
+        'yml',
+        'yaml',
+        'bash',
+        'shell',
+      ],
+      theme: 'one-dark-pro',
+    }),
     iconifyPlugin(),
     googleAnalyticsPlugin({
       // cSpell: disable-next-line

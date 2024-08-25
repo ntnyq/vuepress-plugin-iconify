@@ -1,6 +1,10 @@
 {
   "prettier.enable": true,
   "eslint.enable": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
   "eslint.validate": [
     "vue",
     "html",
@@ -14,5 +18,14 @@
     "typescriptreact"
   ],
   "cSpell.allowCompoundWords": true,
-  "cSpell.words": ["bumpp", "changelogithub", "iconify", "pathe", "pnpm", "tsbuildinfo", "vuepress"]
+  "cSpell.words": [
+    "bumpp",
+    "changelogithub",
+    "iconify",
+    "pathe",
+    "pnpm",
+    "shiki",
+    "tsbuildinfo",
+    "vuepress"
+  ]
 }
