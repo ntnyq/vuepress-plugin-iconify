@@ -1,9 +1,14 @@
-import { defineUserConfig } from 'vuepress'
-import { defaultTheme } from '@vuepress/theme-default'
+import path from 'node:path'
+import { fileURLToPath, URL } from 'node:url'
 import { viteBundler } from '@vuepress/bundler-vite'
-import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { shikiPlugin } from '@vuepress/plugin-shiki'
+import { defaultTheme } from '@vuepress/theme-default'
+import { defineUserConfig } from 'vuepress'
 import { iconifyPlugin } from 'vuepress-plugin-iconify'
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
+const resolve = (...args: string[]) => path.resolve(__dirname, '..', ...args)
 
 export default defineUserConfig({
   title: 'vuepress-plugin-iconify',
@@ -11,6 +16,10 @@ export default defineUserConfig({
   description: 'Using icons more easier in VuePress',
 
   bundler: viteBundler(),
+
+  alias: {
+    '@vuepress/plugin-palette/style': resolve('.vuepress/styles/index.scss'),
+  },
 
   head: [
     [
