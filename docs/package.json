@@ -6,11 +6,11 @@
     "dev": "vuepress dev ."
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "^2.0.0-rc.15",
-    "@vuepress/plugin-google-analytics": "^2.0.0-rc.42",
-    "@vuepress/plugin-shiki": "^2.0.0-rc.47",
-    "@vuepress/theme-default": "^2.0.0-rc.47",
-    "sass-embedded": "^1.79.3",
+    "@vuepress/bundler-vite": "^2.0.0-rc.17",
+    "@vuepress/plugin-google-analytics": "^2.0.0-rc.52",
+    "@vuepress/plugin-shiki": "^2.0.0-rc.52",
+    "@vuepress/theme-default": "^2.0.0-rc.52",
+    "sass-embedded": "^1.79.4",
     "vuepress-plugin-iconify": "workspace:*"
   }
 }
