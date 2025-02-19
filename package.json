@@ -2,14 +2,14 @@
   "name": "vuepress-plugin-iconify",
   "type": "module",
   "version": "0.6.0",
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@10.4.1",
   "description": "Using icons more easier in VuePress",
   "keywords": [
-    "vuepress",
-    "vuepress-plugin",
-    "iconify",
     "icon",
-    "svg"
+    "iconify",
+    "svg",
+    "vuepress",
+    "vuepress-plugin"
   ],
   "license": "MIT",
   "author": {
@@ -22,10 +22,10 @@
     "url": "https://github.com/ntnyq/vuepress-plugin-iconify/issues"
   },
   "exports": {
+    "./package.json": "./package.json",
     ".": "./dist/node/index.js",
     "./client": "./dist/client/index.js",
-    "./client/*": "./dist/client/*",
-    "./package.json": "./package.json"
+    "./client/*": "./dist/client/*"
   },
   "main": "./dist/node/index.js",
   "types": "./dist/node/index.d.ts",
@@ -35,7 +35,7 @@
   "scripts": {
     "build": "run-s clean build:lib",
     "build:lib": "tsc -b",
-    "clean": "rimraf dist *.tsbuildinfo",
+    "clean": "premove dist",
     "deploy": "run-s build docs:build",
     "dev": "run-s clean dev:lib",
     "dev:lib": "tsc -b --watch",
@@ -52,25 +52,29 @@
     "vuepress": "^2.0.0-rc.15"
   },
   "dependencies": {
-    "@iconify/vue": "^4.1.2",
+    "@iconify/vue": "^4.3.0",
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.3.0",
-    "@ntnyq/prettier-config": "^1.22.0",
-    "@types/node": "^22.9.3",
-    "bumpp": "^9.8.1",
-    "eslint": "^9.15.0",
+    "@ntnyq/eslint-config": "^4.0.0-beta.8",
+    "@ntnyq/prettier-config": "^2.0.0",
+    "@types/node": "^22.13.4",
+    "bumpp": "^10.0.3",
+    "eslint": "^9.20.1",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
-    "npm-run-all2": "^7.0.1",
-    "prettier": "^3.3.3",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.7.2",
-    "vuepress": "^2.0.0-rc.18"
+    "npm-run-all2": "^7.0.2",
+    "premove": "^4.0.0",
+    "prettier": "^3.5.1",
+    "typescript": "^5.7.3",
+    "vuepress": "^2.0.0-rc.19"
   },
-  "prettier": "@ntnyq/prettier-config",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
   "nano-staged": {
-    "*.{js,ts,cjs,mjs,vue,yaml,yml,md,json}": "eslint --fix"
+    "*.{js,ts,cjs,mjs,vue,md,yml,yaml,json}": "eslint --fix"
   }
 }

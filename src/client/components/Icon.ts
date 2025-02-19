@@ -1,6 +1,10 @@
 import { Icon as IconifyVueIcon } from '@iconify/vue'
 import { defineComponent, h } from 'vue'
-import type { IconifyIcon, IconifyIconOnLoad, IconifyRenderMode } from '@iconify/vue'
+import type {
+  IconifyIcon,
+  IconifyIconOnLoad,
+  IconifyRenderMode,
+} from '@iconify/vue'
 import type { PropType, StyleValue } from 'vue'
 
 export const Icon = defineComponent({
