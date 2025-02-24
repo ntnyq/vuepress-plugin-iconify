@@ -6,10 +6,10 @@
     "dev": "vuepress dev ."
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "^2.0.0-rc.20",
-    "@vuepress/plugin-google-analytics": "^2.0.0-rc.80",
-    "@vuepress/plugin-shiki": "^2.0.0-rc.80",
-    "@vuepress/theme-default": "^2.0.0-rc.80",
+    "@vuepress/bundler-vite": "catalog:",
+    "@vuepress/plugin-google-analytics": "catalog:",
+    "@vuepress/plugin-shiki": "catalog:",
+    "@vuepress/theme-default": "catalog:",
     "sass-embedded": "^1.85.1",
     "vuepress-plugin-iconify": "workspace:*"
   }

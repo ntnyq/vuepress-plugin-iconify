@@ -14,21 +14,11 @@ export const Icon = defineComponent({
       required: true,
     },
 
-    width: {
-      type: [String, Number],
-    },
+    width: [String, Number],
+    height: [String, Number],
 
-    height: {
-      type: [String, Number],
-    },
-
-    mode: {
-      type: String as PropType<IconifyRenderMode>,
-    },
-
-    style: {
-      type: [String, Object, Array] as PropType<StyleValue>,
-    },
+    mode: String as PropType<IconifyRenderMode>,
+    style: [String, Object, Array] as PropType<StyleValue>,
 
     color: String,
     flip: String,

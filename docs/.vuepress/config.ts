@@ -1,14 +1,12 @@
-import path from 'node:path'
-import { fileURLToPath, URL } from 'node:url'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { iconifyPlugin } from 'vuepress-plugin-iconify'
+import { repository } from '../../package.json'
 
-const __dirname = fileURLToPath(new URL('.', import.meta.url))
-const resolve = (...args: string[]) => path.resolve(__dirname, '..', ...args)
+const REPO_SLUG = repository
 
 export default defineUserConfig({
   title: 'vuepress-plugin-iconify',
@@ -16,10 +14,6 @@ export default defineUserConfig({
   description: 'Using icons more easier in VuePress',
 
   bundler: viteBundler(),
-
-  alias: {
-    '@vuepress/plugin-palette/style': resolve('.vuepress/styles/index.scss'),
-  },
 
   head: [
     [
@@ -33,8 +27,8 @@ export default defineUserConfig({
   ],
 
   theme: defaultTheme({
-    repo: 'ntnyq/vuepress-plugin-iconify',
-    docsRepo: 'ntnyq/vuepress-plugin-iconify',
+    repo: REPO_SLUG,
+    docsRepo: REPO_SLUG,
     docsDir: 'docs',
     docsBranch: 'main',
     navbar: [
@@ -42,7 +36,7 @@ export default defineUserConfig({
       { text: 'Guide', link: '/guide/' },
       {
         text: 'Changelog',
-        link: 'https://github.com/ntnyq/vuepress-plugin-iconify/releases',
+        link: `https://github.com/${REPO_SLUG}/releases`,
       },
     ],
     sidebar: ['/guide/'],
@@ -50,23 +44,7 @@ export default defineUserConfig({
 
   plugins: [
     shikiPlugin({
-      langs: [
-        'js',
-        'ts',
-        'md',
-        'jsx',
-        'tsx',
-        'html',
-        'vue',
-        'css',
-        'scss',
-        'json',
-        'jsonc',
-        'yml',
-        'yaml',
-        'bash',
-        'shell',
-      ],
+      langs: ['js', 'ts', 'md', 'html', 'vue', 'bash', 'shell'],
       theme: 'one-dark-pro',
     }),
     iconifyPlugin(),
