@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ESNext",
     "lib": ["DOM", "ES2022"],
     "module": "ESNext",
     "rootDir": "./src",
     "moduleResolution": "Bundler",
     "types": ["node"],
+    "erasableSyntaxOnly": true,
+    "libReplacement": false,
     "declaration": true,
     "sourceMap": false,
     "outDir": "./dist",
