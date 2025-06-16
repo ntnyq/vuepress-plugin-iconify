@@ -1,10 +1,6 @@
 import { Icon as IconifyVueIcon } from '@iconify/vue'
 import { defineComponent, h } from 'vue'
-import type {
-  IconifyIcon,
-  IconifyIconOnLoad,
-  IconifyRenderMode,
-} from '@iconify/vue'
+import type { IconifyIcon, IconifyRenderMode } from '@iconify/vue'
 import type { PropType, StyleValue } from 'vue'
 
 export const Icon = defineComponent({
@@ -31,11 +27,7 @@ export const Icon = defineComponent({
 
     inline: Boolean,
     rotate: Number,
-
-    onLoad: {
-      type: Function as PropType<IconifyIconOnLoad>,
-      default: () => {},
-    },
+    ariaHidden: Boolean,
   },
 
   setup(props) {
@@ -52,7 +44,7 @@ export const Icon = defineComponent({
         hFlip: props.horizontalFlip || props.hFlip,
         inline: props.inline,
         rotate: props.rotate,
-        onLoad: props.onLoad,
+        ariaHidden: props.ariaHidden,
       })
   },
 })

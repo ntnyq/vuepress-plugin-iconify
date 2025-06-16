@@ -1,13 +1,16 @@
 packages:
   - .
   - docs
+
 catalog:
   '@vuepress/bundler-vite': ^2.0.0-rc.23
   '@vuepress/plugin-google-analytics': ^2.0.0-rc.107
   '@vuepress/plugin-shiki': ^2.0.0-rc.108
   '@vuepress/theme-default': ^2.0.0-rc.108
   vuepress: ^2.0.0-rc.23
+
 overrides:
-  esbuild: ^0.25.1
+  esbuild: ^0.25.5
 onlyBuiltDependencies:
   - esbuild
+  - unrs-resolver

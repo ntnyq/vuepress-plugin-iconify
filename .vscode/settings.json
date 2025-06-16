@@ -32,6 +32,7 @@
     "pnpm",
     "shiki",
     "tsbuildinfo",
+    "unrs",
     "vite",
     "vuepress"
   ]
