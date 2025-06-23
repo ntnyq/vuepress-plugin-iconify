@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@ntnyq/eslint-config": "^5.0.0-beta.6",
-    "@ntnyq/prettier-config": "^2.2.0",
+    "@ntnyq/prettier-config": "^3.0.1",
     "@types/node": "^24.0.1",
     "bumpp": "^10.1.1",
     "eslint": "^9.29.0",
