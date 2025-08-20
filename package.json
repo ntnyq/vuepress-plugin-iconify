@@ -2,7 +2,7 @@
   "name": "vuepress-plugin-iconify",
   "type": "module",
   "version": "0.8.0",
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.15.0",
   "description": "Using icons more easier in VuePress",
   "keywords": [
     "icon",
@@ -43,9 +43,8 @@
     "docs:dev": "pnpm -C docs run dev",
     "lint": "eslint",
     "prepare": "husky",
-    "release": "run-s release:check release:version release:publish",
+    "release": "run-s release:check release:version",
     "release:check": "run-s lint typecheck clean build",
-    "release:publish": "pnpm publish",
     "release:version": "bumpp",
     "typecheck": "tsc --noEmit"
   },
@@ -59,8 +58,8 @@
   "devDependencies": {
     "@ntnyq/eslint-config": "^5.3.1",
     "@ntnyq/prettier-config": "^3.0.1",
-    "@types/node": "^24.2.1",
-    "bumpp": "^10.2.2",
+    "@types/node": "^24.3.0",
+    "bumpp": "^10.2.3",
     "eslint": "^9.33.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",

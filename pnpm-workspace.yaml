@@ -10,7 +10,8 @@ catalog:
   vuepress: ^2.0.0-rc.24
 
 overrides:
-  esbuild: ^0.25.5
+  esbuild: ^0.25.9
 onlyBuiltDependencies:
+  - '@parcel/watcher'
   - esbuild
   - unrs-resolver
