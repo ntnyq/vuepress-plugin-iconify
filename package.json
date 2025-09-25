@@ -2,7 +2,7 @@
   "name": "vuepress-plugin-iconify",
   "type": "module",
   "version": "0.8.0",
-  "packageManager": "pnpm@10.16.1",
+  "packageManager": "pnpm@10.17.1",
   "description": "Using icons more easier in VuePress",
   "keywords": [
     "icon",
@@ -33,11 +33,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "run-s clean build:lib",
-    "build:lib": "tsc -b",
-    "clean": "premove dist",
+    "build": "tsdown",
     "deploy": "run-s build docs:build",
-    "dev": "run-s clean dev:lib",
+    "dev": "tsdown --watch",
     "dev:lib": "tsc -b --watch",
     "docs:build": "pnpm -C docs run build",
     "docs:dev": "pnpm -C docs run dev",
@@ -53,19 +51,19 @@
   },
   "dependencies": {
     "@iconify/vue": "^5.0.0",
-    "vue": "^3.5.21"
+    "vue": "^3.5.22"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^5.5.0",
+    "@ntnyq/eslint-config": "^5.6.0",
     "@ntnyq/prettier-config": "^3.0.1",
-    "@types/node": "^24.4.0",
+    "@types/node": "^24.5.2",
     "bumpp": "^10.2.3",
-    "eslint": "^9.35.0",
+    "eslint": "^9.36.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^8.0.4",
-    "premove": "^4.0.0",
     "prettier": "^3.6.2",
+    "tsdown": "^0.15.4",
     "typescript": "^5.9.2",
     "vuepress": "catalog:"
   },
