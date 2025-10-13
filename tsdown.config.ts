@@ -5,5 +5,6 @@ export default defineConfig({
   dts: true,
   entry: ['src/node/**/*.ts', 'src/client/**/*.ts'],
   hash: false,
+  platform: 'neutral',
   unbundle: true,
 })
