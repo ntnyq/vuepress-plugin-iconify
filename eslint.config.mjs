@@ -2,4 +2,7 @@
 
 import { defineESLintConfig } from '@ntnyq/eslint-config'
 
-export default defineESLintConfig()
+export default defineESLintConfig({
+  oxfmt: true,
+  prettier: false,
+})

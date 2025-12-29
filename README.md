@@ -38,7 +38,7 @@ export default defineUserConfig({
 
 Then, you can use the `VpIcon` component in your docs:
 
-```html
+```markdown
 <vp-icon
   icon="vscode-icons:file-type-vue"
   width="50px"
