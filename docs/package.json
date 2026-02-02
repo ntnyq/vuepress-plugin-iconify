@@ -11,7 +11,7 @@
     "@vuepress/plugin-google-analytics": "catalog:",
     "@vuepress/plugin-shiki": "catalog:",
     "@vuepress/theme-default": "catalog:",
-    "sass-embedded": "^1.97.2",
+    "sass-embedded": "^1.97.3",
     "vuepress-plugin-iconify": "workspace:*"
   }
 }
