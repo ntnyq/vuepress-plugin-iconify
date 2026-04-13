@@ -1,13 +1,13 @@
 packages:
   - docs
 catalog:
-  '@vuepress/bundler-vite': ^2.0.0-rc.27
-  '@vuepress/plugin-google-analytics': ^2.0.0-rc.126
-  '@vuepress/plugin-shiki': ^2.0.0-rc.126
-  '@vuepress/theme-default': ^2.0.0-rc.126
-  vuepress: ^2.0.0-rc.27
+  '@vuepress/bundler-vite': ^2.0.0-rc.28
+  '@vuepress/plugin-google-analytics': ^2.0.0-rc.128
+  '@vuepress/plugin-shiki': ^2.0.0-rc.128
+  '@vuepress/theme-default': ^2.0.0-rc.128
+  vuepress: ^2.0.0-rc.28
 overrides:
-  esbuild: ^0.27.4
+  esbuild: ^0.28.0
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
