@@ -36,6 +36,16 @@ export default defineUserConfig({
 })
 ```
 
+Starting from this version, the plugin works in offline mode by default.
+It scans your docs source at build time, extracts used `prefix:name` icon ids,
+and embeds static icon data into the client bundle.
+
+Install icon collections for icons you use, for example:
+
+```shell
+pnpm add -D @iconify-json/vscode-icons @iconify-json/fa @iconify-json/fluent-emoji-flat
+```
+
 Then, you can use the `VpIcon` component in your docs:
 
 ```markdown
@@ -73,6 +83,38 @@ Then, you can use the `VpIcon` component in your docs:
   width="50px"
 />
 ```
+
+## Options
+
+```ts
+import { defineUserConfig } from 'vuepress'
+import { iconifyPlugin } from 'vuepress-plugin-iconify'
+
+export default defineUserConfig({
+  plugins: [
+    iconifyPlugin({
+      componentName: 'VpIcon',
+      mode: 'offline',
+      icons: ['fa:github'],
+      staticIcons: {
+        collections: {
+          'vscode-icons': true,
+        },
+      },
+      scan: true,
+    }),
+  ],
+})
+```
+
+- `componentName`: global component name, default `VpIcon`.
+- `mode`: `offline` (default) or `online`.
+- `icons`: explicit icon ids to always include.
+- `staticIcons.collections`: preload entire collections (`true`) or selected names.
+- `scan`: auto-scan project files and collect icon ids (`true` by default).
+- `scanDirs` / `scanExtensions` / `ignoreDirs`: customize scan range.
+
+Set `mode: 'online'` to allow runtime fallback requests when icon data is missing.
 
 ## Prior Art
 

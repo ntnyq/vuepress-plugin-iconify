@@ -1,7 +1,10 @@
-import { Icon as IconifyVueIcon } from '@iconify/vue'
+import { getIcon, Icon as IconifyVueIcon } from '@iconify/vue'
 import { defineComponent, h } from 'vue'
 import type { IconifyIcon, IconifyRenderMode } from '@iconify/vue'
 import type { PropType, StyleValue } from 'vue'
+import type { IconifyMode } from '../../shared/types.js'
+
+declare const __ICONIFY_MODE__: IconifyMode
 
 export const Icon = defineComponent({
   props: {
@@ -31,9 +34,26 @@ export const Icon = defineComponent({
   },
 
   setup(props) {
-    return () =>
-      h(IconifyVueIcon, {
-        icon: props.icon,
+    const resolveIcon = (): string | IconifyIcon | null => {
+      if (__ICONIFY_MODE__ !== 'offline') {
+        return props.icon
+      }
+
+      if (typeof props.icon !== 'string') {
+        return props.icon
+      }
+
+      return getIcon(props.icon) || null
+    }
+
+    return () => {
+      const resolvedIcon = resolveIcon()
+      if (!resolvedIcon) {
+        return null
+      }
+
+      return h(IconifyVueIcon, {
+        icon: resolvedIcon,
         width: props.width,
         height: props.height,
         mode: props.mode,
@@ -46,5 +66,6 @@ export const Icon = defineComponent({
         rotate: props.rotate,
         ariaHidden: props.ariaHidden,
       })
+    }
   },
 })

@@ -33,6 +33,18 @@ export default defineUserConfig({
 })
 ```
 
+The plugin runs in offline mode by default:
+
+- build step scans your source files and collects icon ids (`prefix:name`)
+- matched icon data is bundled into static client payload
+- missing icons do not trigger runtime network requests in offline mode
+
+Install icon collections for your used prefixes, for example:
+
+```shell
+pnpm add -D @iconify-json/vscode-icons @iconify-json/fa @iconify-json/fluent-emoji-flat
+```
+
 Then, you can use the `VpIcon` component in your markdown docs:
 
 ```md
@@ -73,6 +85,14 @@ export default defineUserConfig({
   plugins: [
     iconifyPlugin({
       componentName: 'VP',
+      mode: 'offline',
+      icons: ['fa:github'],
+      staticIcons: {
+        collections: {
+          'vscode-icons': true,
+        },
+      },
+      scan: true,
     }),
   ],
 })
@@ -84,6 +104,62 @@ export default defineUserConfig({
 - **default:** `VpIcon`
 
 Override the default component name `VpIcon` via setting this option.
+
+### mode
+
+- **type:** `'offline' | 'online'`
+- **default:** `'offline'`
+
+Controls runtime behavior for missing icon data.
+
+- `offline`: strict offline rendering, no network fallback.
+- `online`: allows runtime fallback requests for missing icons.
+
+### icons
+
+- **type:** `string[]`
+- **default:** `[]`
+
+Explicit icon ids to always include in static payload.
+
+### staticIcons
+
+- **type:** `{ collections?: Record<string, true | string[]>; icons?: string[] }`
+- **default:** `undefined`
+
+Additional static icon sources.
+
+- `collections[prefix] = true`: include the whole icon set.
+- `collections[prefix] = ['name1', 'name2']`: include selected icons.
+- `icons`: include explicit `prefix:name` ids.
+
+### scan
+
+- **type:** `boolean`
+- **default:** `true`
+
+Automatically scans project files and extracts `prefix:name` icon ids.
+
+### scanDirs
+
+- **type:** `string[]`
+- **default:** `['.']`
+
+Directories to scan when `scan` is enabled.
+
+### scanExtensions
+
+- **type:** `string[]`
+- **default:** `['.md', '.mdx', '.vue', '.html']`
+
+File extensions used by the scan collector.
+
+### ignoreDirs
+
+- **type:** `string[]`
+- **default:** common build and dependency folders (`node_modules`, `dist`, `.git`, etc.)
+
+Additional directories to skip when scanning.
 
 ## Component props
 

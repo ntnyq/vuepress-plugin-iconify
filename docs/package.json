@@ -7,6 +7,9 @@
     "dev": "vuepress dev ."
   },
   "devDependencies": {
+    "@iconify-json/fa": "^1.2.2",
+    "@iconify-json/fluent-emoji-flat": "^1.2.5",
+    "@iconify-json/vscode-icons": "^1.2.55",
     "@vuepress/bundler-vite": "catalog:",
     "@vuepress/plugin-google-analytics": "catalog:",
     "@vuepress/plugin-shiki": "catalog:",
