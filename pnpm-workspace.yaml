@@ -9,7 +9,7 @@ catalog:
   vuepress: ^2.0.0-rc.31
 
 overrides:
-  esbuild: ^0.28.1
+  esbuild: ^0.28.2
 
 allowBuilds:
   '@parcel/watcher': true
