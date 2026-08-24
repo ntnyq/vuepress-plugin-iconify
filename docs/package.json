@@ -9,12 +9,12 @@
   "devDependencies": {
     "@iconify-json/fa": "^1.2.2",
     "@iconify-json/fluent-emoji-flat": "^1.2.5",
-    "@iconify-json/vscode-icons": "^1.2.70",
+    "@iconify-json/vscode-icons": "^1.2.73",
     "@vuepress/bundler-vite": "catalog:",
     "@vuepress/plugin-google-analytics": "catalog:",
     "@vuepress/plugin-shiki": "catalog:",
     "@vuepress/theme-default": "catalog:",
-    "sass-embedded": "^1.100.0",
+    "sass-embedded": "^1.102.0",
     "vuepress-plugin-iconify": "workspace:*"
   }
 }
