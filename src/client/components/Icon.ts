@@ -48,6 +48,7 @@ export const Icon = defineComponent({
 
     return () => {
       const resolvedIcon = resolveIcon()
+
       if (!resolvedIcon) {
         return null
       }

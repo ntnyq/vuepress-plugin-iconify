@@ -17,6 +17,7 @@ describe('shared/utils', () => {
     for (const dir of tempDirs) {
       rmSync(dir, { force: true, recursive: true })
     }
+
     tempDirs.length = 0
   })
 
@@ -39,6 +40,7 @@ describe('shared/utils', () => {
 
   it('extracts icon ids from supported content patterns', () => {
     const names = new Set<string>()
+
     addIconsFromContent(
       names,
       `
@@ -71,6 +73,7 @@ describe('shared/utils', () => {
 
   it('collects scan files with extension filter', () => {
     const root = mkdtempSync(join(tmpdir(), 'iconify-utils-test-'))
+
     tempDirs.push(root)
 
     mkdirSync(join(root, 'docs'), { recursive: true })
@@ -95,6 +98,7 @@ describe('shared/utils', () => {
 
   it('supports custom ignore directories for scan files', () => {
     const root = mkdtempSync(join(tmpdir(), 'iconify-utils-test-'))
+
     tempDirs.push(root)
 
     mkdirSync(join(root, 'docs'), { recursive: true })

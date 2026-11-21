@@ -2,11 +2,11 @@ packages:
   - docs
 
 catalog:
-  '@vuepress/bundler-vite': ^2.0.0-rc.31
-  '@vuepress/plugin-google-analytics': ^2.0.0-rc.135
-  '@vuepress/plugin-shiki': ^2.0.0-rc.137
-  '@vuepress/theme-default': ^2.0.0-rc.137
-  vuepress: ^2.0.0-rc.31
+  '@vuepress/bundler-vite': ^2.0.0-rc.32
+  '@vuepress/plugin-google-analytics': ^2.0.0-rc.138
+  '@vuepress/plugin-shiki': ^2.0.0-rc.138
+  '@vuepress/theme-default': ^2.0.0-rc.138
+  vuepress: ^2.0.0-rc.32
 
 overrides:
   esbuild: ^0.28.2
@@ -17,8 +17,6 @@ allowBuilds:
   unrs-resolver: true
 
 ignoreWorkspaceRootCheck: true
-
 minimumReleaseAge: 0
-
 pmOnFail: warn
 shamefullyHoist: true

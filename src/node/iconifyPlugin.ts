@@ -5,6 +5,7 @@ import type { Plugin } from 'vuepress'
 import type { IconifyPluginOptions } from '../shared/types.js'
 
 const __dirname = getDirname(import.meta.url)
+
 export type { IconifyPluginOptions } from '../shared/types.js'
 
 export const iconifyPlugin = (options: IconifyPluginOptions = {}): Plugin => {

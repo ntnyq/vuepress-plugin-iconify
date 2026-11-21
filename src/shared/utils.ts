@@ -43,6 +43,7 @@ export function loadStaticIcons(
       ? options.scanDirs
       : DEFAULT_SCAN_DIRS
     const files = collectScanFiles(scanDirs, options)
+
     for (const file of files) {
       addIconsFromContent(iconNames, readText(file))
     }
@@ -52,6 +53,7 @@ export function loadStaticIcons(
 
   if (options.mode === 'offline' || options.mode === undefined) {
     const missing = Array.from(iconNames).filter(name => !resolved[name])
+
     if (missing.length > 0) {
       console.warn(
         `[vuepress-plugin-iconify] Missing offline icons (${missing.length}): ${missing.join(', ')}`,
@@ -73,9 +75,11 @@ export function loadStaticIcons(
  */
 export function createProjectRequire() {
   const packageJson = resolve(process.cwd(), 'package.json')
+
   if (existsSync(packageJson)) {
     return createRequire(packageJson)
   }
+
   return createRequire(import.meta.url)
 }
 
@@ -110,6 +114,7 @@ export function addExplicitIcons(
     if (config === true) {
       continue
     }
+
     for (const iconName of config) {
       addIconName(names, `${prefix}:${iconName}`)
     }
@@ -147,6 +152,7 @@ export function collectScanFiles(
 
   for (const dir of scanDirs) {
     const startDir = isAbsolute(dir) ? dir : resolve(process.cwd(), dir)
+
     walkDir(
       startDir,
       file => {
@@ -207,6 +213,7 @@ export function walkDir(
       if (!shouldSkip) {
         walkDir(fullPath, onFile, ignoreDirs)
       }
+
       continue
     }
 
@@ -261,8 +268,10 @@ export function addIconsFromContent(names: Set<string>, content: string) {
 
   for (const regex of [ICON_ATTR_RE, NAMED_ICON_RE]) {
     let match: RegExpExecArray | null
+
     while ((match = regex.exec(content)) !== null) {
       const iconName = match[1]?.toLowerCase()
+
       if (!iconName) {
         continue
       }
@@ -287,10 +296,13 @@ export function addIconName(names: Set<string>, icon: string) {
   if (!icon.includes(':')) {
     return
   }
+
   const [prefix, name] = icon.split(':')
+
   if (!prefix || !name || INVALID_PREFIXES.has(prefix.toLowerCase())) {
     return
   }
+
   names.add(`${prefix.toLowerCase()}:${name}`)
 }
 
@@ -316,12 +328,15 @@ export function resolveIcons(
 
   for (const iconName of iconNames) {
     const [prefix, name] = iconName.split(':')
+
     if (!prefix || !name) {
       continue
     }
+
     if (!byPrefix.has(prefix)) {
       byPrefix.set(prefix, new Set())
     }
+
     byPrefix.get(prefix)!.add(name)
   }
 
@@ -331,29 +346,36 @@ export function resolveIcons(
     if (config !== true) {
       continue
     }
+
     const collection = loadCollection(prefix, projectRequire)
+
     if (!collection?.icons) {
       continue
     }
+
     for (const name of Object.keys(collection.icons)) {
       if (!byPrefix.has(prefix)) {
         byPrefix.set(prefix, new Set())
       }
+
       byPrefix.get(prefix)!.add(name)
     }
   }
 
   for (const [prefix, names] of byPrefix) {
     const collection = loadCollection(prefix, projectRequire)
+
     if (!collection?.icons) {
       continue
     }
 
     for (const name of names) {
       const icon = getIconData(collection as never, name)
+
       if (!icon) {
         continue
       }
+
       result[`${prefix}:${name}`] = {
         ...icon,
         width: (icon.width as number | undefined) ?? collection.width,
@@ -389,11 +411,13 @@ export function loadCollection(
       const mod = projectRequire(
         `@iconify-json/${prefix}`,
       ) as IconifyCollectionJSON
+
       return mod
     } catch {
       console.warn(
         `[vuepress-plugin-iconify] Icon collection "${prefix}" not found. Install @iconify-json/${prefix} to use offline mode.`,
       )
+
       return null
     }
   }
